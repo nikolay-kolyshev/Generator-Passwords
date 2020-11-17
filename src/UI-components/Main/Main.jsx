@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {Button, Form, Typography} from "antd"
-import {ContentStyled, ContentWrapper, PasswordWrapper, Title, TitleWrapper} from "./style/MainStyle"
+import {ButtonStyled, ContentStyled, ContentWrapper, PasswordWrapper, Title, TitleWrapper} from "./style/MainStyle"
 import GeneratePasswordForm from "./GeneratePasswordForm/GeneratePasswordForm"
 import generatePassword from "../../utils/generatePassword"
 import { CopyOutlined } from '@ant-design/icons'
@@ -40,9 +40,9 @@ const Main = () => {
                 <PasswordWrapper>
                     <div>Пароль: {currentPassword}</div>
                     <CopyToClipboard onCopy={onCopy} text={currentPassword}>
-                        <Button type="primary" disabled={!currentPassword} ghost={!copied} icon={<CopyOutlined />}>
-                            Скопировать
-                        </Button>
+                        <ButtonStyled type="primary" disabled={!currentPassword} ghost={!copied} icon={<CopyOutlined />}>
+                            {!copied ? "Скопировать" : "Скопировано!"}
+                        </ButtonStyled>
                     </CopyToClipboard>
                 </PasswordWrapper>
             </ContentWrapper>

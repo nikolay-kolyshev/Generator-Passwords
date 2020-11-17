@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useLayoutEffect, useRef} from "react"
 import { Form, Input, } from 'antd'
 import {FormItemStyled} from "./style/GeneratePasswordForm"
 
@@ -27,7 +27,7 @@ const GeneratePasswordForm = ({generatorPassword, onIDInputChange}) => {
                 rules={[{ required: true, message: 'Пожалуйста, введите ваш ID!' }]}
                 onChange={onIDInputChange}
             >
-                <Input />
+                <Input autofocus="true"/>
             </FormItemStyled>
         </Form>
     )

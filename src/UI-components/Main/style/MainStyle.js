@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Layout, Typography} from "antd"
+import {Button, Layout, Typography} from "antd"
 
 const {Content} = Layout
 
@@ -43,4 +43,17 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled(Typography.Title)`
     color: white !important;
+`
+
+export const ButtonStyled = styled(Button)`
+    background-color: #13922C !important;
+    border-color: #13922C !important;
+    &.ant-btn-background-ghost{
+        background-color: transparent !important;
+        border-color: #40A9FF !important;
+    }
+    &[disabled] {
+        border-color: #6B6B73 !important;
+        color: #6B6B73 !important;
+    }
 `
