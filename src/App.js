@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+
+import 'antd/dist/antd.css'
+import Header from "./UI-components/Header/Header"
+import Main from "./UI-components/Main/Main"
+import Footer from "./UI-components/Footer/Footer"
+import { Layout } from 'antd'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Layout>
+        <Header/>
+        <Main/>
+        <Footer style={{ textAlign: 'center' }}>Generator Passwords ©2020 Колышев Н.И., Сахаров А.А., Статуева А.С.</Footer>
+      </Layout>
   );
 }
 
